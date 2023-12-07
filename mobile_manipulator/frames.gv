@@ -1,0 +1,21 @@
+digraph G {
+"world" -> "map"[label=" Broadcaster: /world_to_map\nAverage rate: 20.064\nBuffer length: 4.984\nMost recent transform: 77.956\nOldest transform: 72.972\n"];
+"base_footprint" -> "base_link"[label=" Broadcaster: /base_link_broadcaster\nAverage rate: 20.109\nBuffer length: 4.973\nMost recent transform: 77.953\nOldest transform: 72.98\n"];
+"odom" -> "base_footprint"[label=" Broadcaster: /robot_pose_ekf\nAverage rate: 46.154\nBuffer length: 4.94\nMost recent transform: 77.887\nOldest transform: 72.947\n"];
+"base_link" -> "imu_link"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "laser_link"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "arm_base"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 50.202\nBuffer length: 4.96\nMost recent transform: 77.906\nOldest transform: 72.946\n"];
+"bicep" -> "bottom_wrist"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 50.202\nBuffer length: 4.96\nMost recent transform: 77.906\nOldest transform: 72.946\n"];
+"arm_base" -> "bicep"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 50.202\nBuffer length: 4.96\nMost recent transform: 77.906\nOldest transform: 72.946\n"];
+"bottom_wrist" -> "elbow"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 50.202\nBuffer length: 4.96\nMost recent transform: 77.906\nOldest transform: 72.946\n"];
+"base_link" -> "front_left_wheel"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 50.202\nBuffer length: 4.96\nMost recent transform: 77.906\nOldest transform: 72.946\n"];
+"base_link" -> "front_right_wheel"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 50.202\nBuffer length: 4.96\nMost recent transform: 77.906\nOldest transform: 72.946\n"];
+"base_link" -> "rear_left_wheel"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 50.202\nBuffer length: 4.96\nMost recent transform: 77.906\nOldest transform: 72.946\n"];
+"base_link" -> "rear_right_wheel"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 50.202\nBuffer length: 4.96\nMost recent transform: 77.906\nOldest transform: 72.946\n"];
+"elbow" -> "top_wrist"[label=" Broadcaster: /robot_state_publisher\nAverage rate: 50.202\nBuffer length: 4.96\nMost recent transform: 77.906\nOldest transform: 72.946\n"];
+"map" -> "odom"[label=" Broadcaster: /map_to_odom\nAverage rate: 20.053\nBuffer length: 4.937\nMost recent transform: 77.947\nOldest transform: 73.01\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 77.964"[ shape=plaintext ] ;
+}->"world";
+}
