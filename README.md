@@ -1,2 +1,0 @@
-# TidyBot
-Project TidyBot
